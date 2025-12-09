@@ -44,7 +44,11 @@
 .action-col {
   width: 120px;
   white-space: nowrap;
-  display: inline-flex;
+  gap: 10px;
+}
+.action-value-col {
+  display: inline-flex; /* your inline-flex */
+  flex-direction: row; /* stack items vertically */
   gap: 10px;
 }
 

@@ -1,6 +1,6 @@
 // src/components/ContactForm.tsx
 import React, { useEffect } from "react";
-import { useForm, type SubmitHandler } from "react-hook-form";
+import { Controller, useForm, type SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   ContactSchema,
@@ -11,6 +11,7 @@ import { type Contact } from "../redux/types";
 import "../styles/ContactForm.css";
 import { FormField } from "./elements/FormField";
 import { indianStates } from "../data/data";
+import { CustomSelect } from "./elements/CustomSelect";
 
 interface ContactFormProps {
   onSubmit: (data: ContactFormData) => void;
@@ -28,7 +29,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
     defaultValues: defaultValues || initialContactDetails,
   });
 
-  const { register, reset } = form;
+  const { reset } = form;
 
   // Reset on edit mode
   useEffect(() => {
@@ -60,16 +61,19 @@ const ContactForm: React.FC<ContactFormProps> = ({
         {/* State */}
         <div className="form-group">
           <label htmlFor="state">State</label>
-          <select id="state" {...register("state")} defaultValue="">
-            <option value="" disabled>
-              Enter State
-            </option>
-            {indianStates.map((state) => (
-              <option key={state} value={state}>
-                {state}
-              </option>
-            ))}
-          </select>
+          <Controller
+            name="state"
+            control={form.control}
+            render={({ field }) => (
+              <CustomSelect
+                id="state"
+                value={field.value || ""}
+                onChange={field.onChange}
+                options={indianStates}
+                placeholder="Enter State"
+              />
+            )}
+          />
         </div>
         <FormField name="pincode" label="Pincode" required form={form} />
       </div>

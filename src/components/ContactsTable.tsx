@@ -175,18 +175,20 @@ export default function ContactsTable() {
                   {contact.pincode && ` - ${contact.pincode}`}
                 </td>
                 <td className="action-col">
-                  <button
-                    onClick={() => handleEdit(contact)}
-                    className="action-btn"
-                  >
-                    <EditIcon /> Edit
-                  </button>
-                  <button
-                    onClick={() => handleDeleteClick(contact.id)}
-                    className="action-btn"
-                  >
-                    <DeleteIcon /> Delete
-                  </button>
+                  <div className="action-value-col">
+                    <button
+                      onClick={() => handleEdit(contact)}
+                      className="action-btn"
+                    >
+                      <EditIcon /> Edit
+                    </button>
+                    <button
+                      onClick={() => handleDeleteClick(contact.id)}
+                      className="action-btn"
+                    >
+                      <DeleteIcon /> Delete
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}
