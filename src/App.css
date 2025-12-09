@@ -183,18 +183,37 @@ textarea:focus {
 }
 
 input[type="checkbox"] {
-  width: auto; /* keep default size */
-  height: auto;
+  width: 16px; /* keep default size */
+  height: 16px;
+  min-width: 16px;
+  max-width: 16px;
   accent-color: var(--primary-color); /* sets the checked color */
-  background-color: var(--bg-white); /* for most browsers */
-  border: 1px solid var(--border-color);
-  fill: var(--bg-white);
+  background-color: var(--bg-white) !important; /* for most browsers */
+  border: 2px solid var(--border-color);
+  border-radius: 3px;
+  --webkit-appearance: none;
+  --moz-appearance: none;
+  appearance: none;
+  position: relative;
+  padding: 0 !important;
+  flex-shrink: 0;
 }
 
-/* Ensure unchecked boxes appear white on some browsers */
-input[type="checkbox"]:not(:checked) {
-  background-color: var(--bg-white);
-  fill: var(--bg-white);
+input[type="checkbox"]:checked {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color);
+}
+
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .mr-10 {

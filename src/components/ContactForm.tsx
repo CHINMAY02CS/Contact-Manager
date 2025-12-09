@@ -60,8 +60,10 @@ const ContactForm: React.FC<ContactFormProps> = ({
         {/* State */}
         <div className="form-group">
           <label htmlFor="state">State</label>
-          <select id="state" {...register("state")}>
-            <option value="">Enter State</option>
+          <select id="state" {...register("state")} defaultValue="">
+            <option value="" disabled>
+              Enter State
+            </option>
             {indianStates.map((state) => (
               <option key={state} value={state}>
                 {state}
