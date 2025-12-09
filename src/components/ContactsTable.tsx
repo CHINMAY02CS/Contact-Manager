@@ -236,6 +236,7 @@ export default function ContactsTable() {
         isOpen={isConfirmationModalOpen}
         onClose={() => setIsConfirmationModalOpen(false)}
         onConfirm={handleConfirmDeletion}
+        titleCount={deleteMode === "bulk" ? bulkDeleteCount : 0}
         message={
           deleteMode === "single"
             ? "Are you sure you want to delete this contact?"

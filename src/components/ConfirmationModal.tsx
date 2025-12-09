@@ -9,6 +9,7 @@ interface ConfirmationModalProps {
   onConfirm: () => void;
   message: string;
   confirmText: string;
+  titleCount?: number;
 }
 
 const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
@@ -17,6 +18,7 @@ const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
   onConfirm,
   message,
   confirmText,
+  titleCount,
 }) => {
   const handleConfirm = () => {
     onConfirm();
@@ -30,7 +32,7 @@ const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
       title={
         <span>
           <DeleteHeaderIcon />
-          Delete Contact
+          Delete Contact {titleCount ? `(${titleCount})` : ""}
         </span>
       }
       width="400px"
