@@ -1,0 +1,132 @@
+/* src/styles/Modal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  z-index: 1000;
+  padding-top: 80px;
+}
+
+.modal-content {
+  background: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-header {
+  padding: 12px 20px;
+  border-bottom: 1px solid #cbd5e1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.modal-close-btn {
+  background: none;
+  padding: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  color: var(--light-text);
+}
+
+.modal-body {
+  padding: 0px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+/* Confirmation Modal specific styles */
+.modal-body p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.modal-body .note {
+  color: var(--danger-color);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.btn-delete {
+  background-color: var(--delete-red);
+  color: var(--bg-white);
+  width: 100%;
+}
+
+/* Basic Form Styles for ContactForm.css */
+.contact-form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-size: 13px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.contact-form input {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.contact-form .input-error {
+  border-color: var(--danger-color);
+}
+
+.contact-form .error-message {
+  color: var(--danger-color);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.contact-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+/* Simple fade animation for modal (Optional Enhancement) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

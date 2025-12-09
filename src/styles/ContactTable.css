@@ -1,0 +1,98 @@
+/* src/styles/ContactTable.css */
+.contact-table-wrapper {
+  background-color: var(--bg-white);
+  border-radius: 4px;
+  border-width: 8px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contact-table th,
+.contact-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  vertical-align: top;
+  color: #334156;
+}
+
+.contact-table th {
+  background-color: var(--bg-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #334156;
+  text-transform: none;
+}
+
+.contact-table tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+.checkbox-col {
+  width: 40px;
+  text-align: center;
+  padding: auto;
+}
+
+.action-col {
+  width: 120px;
+  white-space: nowrap;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.name-col {
+  white-space: nowrap;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0;
+  display: grid;
+  align-items: center;
+}
+
+.action-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.action-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 50px;
+  color: var(--light-text);
+  font-style: italic;
+}
+
+.editButtonBg {
+  background-color: #f0f6ff;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.trashButtonBg {
+  background-color: #fff1f2;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+  width: 24px;
+}

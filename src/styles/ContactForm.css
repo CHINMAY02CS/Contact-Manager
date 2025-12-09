@@ -1,0 +1,79 @@
+/*
+ * This file contains specific styles for the Add/Edit Contact Form.
+ * It ensures the form matches the clean, grid-based layout shown in the Figma/image.
+ */
+
+.contact-form {
+  padding: 0; /* Form is inside the modal body, which has padding */
+}
+
+/* Two-column grid layout for form fields */
+.form-grid {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* Spacing between grid items */
+}
+
+/* Full-width groups for fields like Address Line 1 that might span two columns */
+.form-grid .full-width {
+  grid-column: span 2;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 13px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #64748b;
+}
+::placeholder {
+  font-weight: 500;
+  color: #cbd5e0;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-color); /* Highlight border on focus */
+}
+
+/* Error State Styles */
+.input-error {
+  border-color: var(
+    --danger-color
+  ) !important; /* Override focus color on error */
+}
+
+.error-message {
+  color: var(--danger-color);
+  font-size: 12px;
+  margin-top: 4px;
+  /* Ensure error messages don't break the form layout */
+  min-height: 14px;
+}
+
+/* Action buttons at the bottom of the form */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px;
+  border-top: 2px solid #e2e8f0; /* Separator line above buttons */
+}

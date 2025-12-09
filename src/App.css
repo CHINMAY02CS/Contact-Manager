@@ -1,0 +1,207 @@
+/* src/App.css */
+:root {
+  /* Colors based on image */
+  --primary-color: #007bff;
+  --primary-light: #2c97ff;
+  --gradient-start: #00d2ff;
+  --gradient-end: #3a7bd5;
+  --text-color: #333;
+  --light-text: #666;
+  --border-color: #ccc;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --danger-color: #dc3545;
+  --delete-red: #ff3838;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Use a standard font for simplicity */
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-color);
+}
+
+.background {
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-header {
+  width: 100%;
+  padding: 15px 40px;
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-subtext {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.content-container {
+  max-width: 1200px; /* Max width to contain the design */
+  width: 100%;
+  padding: 24px 0;
+}
+
+.page-title {
+  font-size: 24px;
+  margin-top: 10px;
+  font-weight: 600;
+  align-self: self-start;
+}
+
+.contact-manager-container {
+  width: 100%;
+
+  padding: 16px;
+  background-color: var(--bg-white);
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+}
+
+/* Button Base Styles */
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+}
+
+.btn-secondary {
+  background-color: #eee;
+  color: var(--text-color);
+}
+
+.btn-outline {
+  background-color: #ffffff;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.confirmation-content .btn-outline {
+  width: 100%;
+}
+
+.btn-delete-bulk {
+  background-color: var(--danger-color);
+  color: var(--bg-white);
+  margin-right: 10px;
+}
+
+/* src/styles/Home.css */
+.action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 16px 0;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  /* padding:  */
+  width: 400px;
+  background-color: var(--bg-white);
+}
+
+.search-box svg {
+  width: 18px;
+  height: 18px;
+  color: var(--light-text);
+  margin-right: 8px;
+}
+
+.search-box input {
+  border: #e2e8f0;
+  outline: none;
+  flex-grow: 1;
+  font-size: 14px;
+  height: 36px;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* Apply to all form inputs */
+input,
+select,
+textarea {
+  background-color: var(--bg-white); /* white background for inputs */
+  color: var(--text-color); /* text color */
+  border: 1px solid #e2e8f0;
+  padding: 8px 10px;
+  border-radius: 24px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+}
+
+/* Optional: focus effect */
+select:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 3px var(--primary-light);
+}
+
+input[type="checkbox"] {
+  width: auto; /* keep default size */
+  height: auto;
+  accent-color: var(--primary-color); /* sets the checked color */
+  background-color: var(--bg-white); /* for most browsers */
+  border: 1px solid var(--border-color);
+  fill: var(--bg-white);
+}
+
+/* Ensure unchecked boxes appear white on some browsers */
+input[type="checkbox"]:not(:checked) {
+  background-color: var(--bg-white);
+  fill: var(--bg-white);
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.confirmation-content {
+  padding: 16px;
+  color: #334156;
+}
