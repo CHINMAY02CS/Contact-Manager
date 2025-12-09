@@ -14,9 +14,7 @@ Clone the project and run npm install followed by npm run dev.
 
 ## Optional Enhancements
 
-The following optional enhancements were not implemented
-- Toast Notifications
-- localStorage persistence
+
 
 ## Images
 
