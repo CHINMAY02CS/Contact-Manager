@@ -5,6 +5,8 @@
 
 .contact-form {
   padding: 0; /* Form is inside the modal body, which has padding */
+  max-height: 70dvh;
+  overflow-y: auto;
 }
 
 /* Two-column grid layout for form fields */
