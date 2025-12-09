@@ -87,6 +87,12 @@
   flex-direction: column;
 }
 
+@media (max-width: 480px) {
+  .contact-form .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .contact-form label {
   font-size: 13px;
   margin-bottom: 5px;
