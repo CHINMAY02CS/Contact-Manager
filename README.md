@@ -1,74 +1,32 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Contact-Manager - check at https://contactmanagerchinmay.netlify.app/
 
-Currently, two official plugins are available:
+This project is a functional Contact Manager built according to the specified frontend task requirements. It serves as a demonstration of clean state management, design adherence, and robust application structure using modern web technologies.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Framework - React
+### Language - TypeScript
+### State Management - Redux
+### Styling - Custom CSS
+### Form Management - React Hook Form + Zod
 
-## React Compiler
+## Installation & run steps
+Clone the project and run npm install followed by npm run dev.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Optional Enhancements
 
-## Expanding the ESLint configuration
+The following optional enhancements were not implemented
+- Toast Notifications
+- localStorage persistence
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Images
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+<img width="1470" height="798" alt="image" src="https://github.com/user-attachments/assets/2e74b1e1-c78d-44d9-9f93-8d1b46d1103d" />
+<img width="1470" height="798" alt="image" src="https://github.com/user-attachments/assets/aaa72931-393e-46fd-93fc-9820d2303a3c" />
+<img width="1470" height="798" alt="image" src="https://github.com/user-attachments/assets/f1d879d8-249b-44df-87fa-74b1cc9b4550" />
+<img width="1470" height="798" alt="image" src="https://github.com/user-attachments/assets/301c54b5-cddc-49a4-ab7f-1e4a2716ccd2" />
+<img width="1470" height="798" alt="image" src="https://github.com/user-attachments/assets/7714e45c-c068-46ff-a714-b677309f39af" />
+<img width="435" height="798" alt="image" src="https://github.com/user-attachments/assets/6d8cd49e-68b1-4637-8edf-e2e9f501b608" />
+<img width="435" height="798" alt="image" src="https://github.com/user-attachments/assets/c10de54e-701b-4f55-9368-91290612aa03" />
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# Contact-Manager
