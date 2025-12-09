@@ -5,8 +5,6 @@
 
 .contact-form {
   padding: 0; /* Form is inside the modal body, which has padding */
-  max-height: 70dvh;
-  overflow-y: auto;
 }
 
 /* Two-column grid layout for form fields */
@@ -15,6 +13,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px; /* Spacing between grid items */
+  max-height: 50dvh;
+  overflow-y: auto;
 }
 
 /* Full-width groups for fields like Address Line 1 that might span two columns */
