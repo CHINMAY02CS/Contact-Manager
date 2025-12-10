@@ -69,6 +69,7 @@
 
 .error-message {
   color: var(--danger-color);
+  font-weight: 500;
   font-size: 12px;
   margin-top: 4px;
   /* Ensure error messages don't break the form layout */
