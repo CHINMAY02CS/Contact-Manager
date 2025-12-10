@@ -35,7 +35,7 @@
 }
 ::placeholder {
   font-weight: 500;
-  color: #cbd5e0;
+  color: #cbd5e1;
   font-size: 14px;
 }
 
@@ -82,4 +82,54 @@
   gap: 10px;
   padding: 16px;
   border-top: 2px solid #e2e8f0; /* Separator line above buttons */
+}
+
+.contact-form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 480px) {
+  .contact-form .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-form label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.contact-form input {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.contact-form .input-error {
+  border-color: var(--danger-color);
+}
+
+.contact-form .error-message {
+  color: var(--danger-color);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.contact-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 15px;
+  border-top: 2px solid #e2e8f0;
 }

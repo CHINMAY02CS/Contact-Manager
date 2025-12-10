@@ -114,7 +114,6 @@ export default function ContactsTable() {
             placeholder="Search by Name or Contact, Email, State..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="input-search"
           />
           <SearchIcon />
         </div>

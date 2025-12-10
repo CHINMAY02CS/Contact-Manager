@@ -1,7 +1,7 @@
 /* src/App.css */
 :root {
   /* Colors based on image */
-  --primary-color: #007bff;
+  --primary-color: #016ffa;
   --primary-light: #2c97ff;
   --gradient-start: #0372f7;
   --gradient-end: #0cc7c1;
@@ -38,7 +38,7 @@ body {
 
 .app-header {
   width: 100%;
-  padding: 15px 40px;
+  padding: 15px 0px;
   background: linear-gradient(
     to right,
     var(--gradient-start),
@@ -48,6 +48,13 @@ body {
   color: var(--bg-white);
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.logo-section {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 0px;
 }
 
 .logo-text {
@@ -152,6 +159,7 @@ body {
   /* padding:  */
   width: 400px;
   background-color: var(--bg-white);
+  color: #cbd5e1;
 }
 
 @media (max-width: 480px) {
